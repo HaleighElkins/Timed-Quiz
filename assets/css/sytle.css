@@ -3,16 +3,24 @@ font-family: 'Merienda', cursive;}
 
 
 
+p {
+    margin: 15px 15px;
+}
 
+.scoresHeader {
+    position:absolute;
+    top:20px;
+    left:20px;
+}
 
-
+.timer {
+    position: absolute;
+    top:20px;
+    right:20px;
+}
 
 .landing {
     text-align: center;
-}
-
-p {
-    margin: 15px 15px;
 }
 
 button {
