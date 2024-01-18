@@ -31,7 +31,18 @@ var questions =  [
     prompt: "Who was the most popular disgners of the Victorian Era?",
     options: ["<Lady Duff Gordon>", "<Jacques Doucet>", "<Jeanne Paquin and Worth>", "<All of the Above>"],
     answer: "<All of the Above"
-}
+}];
+
+// Dom Elements
+
+var questionsEl = document.querySelector("#questions");
+var timerEl = document.querySelector("#timer");
+var optionsEl = document.querySelector("#options");
+var nameEl = document.querySelector("#name");
+var startBtn = document.querySelector("#start");
+var submitBtn = document.querySelector("#submit");
+var reStartBtn = document.querySelector("#restart");
+
 
 
 
