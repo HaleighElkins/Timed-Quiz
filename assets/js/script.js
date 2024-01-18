@@ -44,6 +44,23 @@ var submitBtn = document.querySelector("#submit");
 var reStartBtn = document.querySelector("#restart");
 
 
+// Quiz Start and to hide the front page
+
+var currentQuestionIndex = 0;
+var time = questions.length * 15;
+var timerId;
+
+
+function quizStart() {
+    timerId = setInterval(clockTick, 1000);
+    timerEl.textContent = time;
+    var landingScreenEl = document.getElementById("start-screen");
+    landingScreenEl.setAttribute("class", "hide");
+    questionsEl.removeAttribute("class");
+    getQuestions();
+}
+
+console.log("quiz start- landing page");
 
 
 
@@ -57,9 +74,3 @@ var reStartBtn = document.querySelector("#restart");
 
 
 
-
-
-
-
-
-]
