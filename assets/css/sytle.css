@@ -27,8 +27,8 @@ button {
     display: inline-block;
     margin: 10px;
     /* cursor:pointer; */
-    color:aqua;
-    background-color:blanchedalmond;
+    color:#3F3728;
+    background-color:#98ACA2;
     border-radius: 10%;
     border: 0%;
     padding: 20px;
@@ -42,6 +42,17 @@ background-color: aliceblue;
     display: block;
 }
 
+.quiz, .scores {
+text-align: center;
+margin: 100px auto 0 auto;
+max-width: 500px;
+}
+
+ol {
+    padding-left: 20px;
+    max-height: 500px;
+    overflow: auto;
+}
 
 
 
