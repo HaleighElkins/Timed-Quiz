@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/css/sytle.css"
+        <link rel="stylesheet" href="assets/css/sytle.css">
         <title>Timed Quiz</title>
     </head>
 
@@ -30,13 +30,18 @@
                  </div>
             </div>
 
-            <!-- div ending page -->
-                <h2> All done </h2>
-                <!-- <p> Final Score is: span </p> -->
-                <!-- <p> Please enter your name input  -->
-                    <!-- button for sumbit -->
-                    <!-- </p> -->
-            <!-- </div -->
+            <div class="hide" id="questions">
+                <h2 id="questions-word"></h2>
+                <div class="options" id="options"></div>
+            </div> 
+
+            <div class="hide" id="quiz=end">
+                <h2> You're All Done! </h2>
+                <p> Your final score is: <span id="score-final"></span></p>
+                <p> Please enter your name: <input type="text" id ="name" max="5"/>
+                        <button id="submit">Submit</button>
+                </p>
+            </div> 
 
         <!-- div feed back? -->
         </main>
