@@ -32,15 +32,17 @@ var questions =  [
     options: ["<Lady Duff Gordon>", "<Jacques Doucet>", "<Jeanne Paquin and Worth>", "<All of the Above>"],
     answer: "<All of the Above"
 }];
+ 
+
 
 // Dom Elements
 
 var questionsEl = document.querySelector("#questions");
 var timerEl = document.querySelector("#timer");
-var optionsEl = document.querySelector("#options");
+var choicesEl = document.querySelector("#options");
 var nameEl = document.querySelector("#name");
 var startBtn = document.querySelector("#start");
-var submitBtn = document.querySelector("#submit");
+var submitBtn = document.querySelector("#submit-score");
 var reStartBtn = document.querySelector("#restart");
 var feedbackEl = document.querySelector("#feedback");
 
@@ -61,21 +63,28 @@ function quizStart() {
     getQuestions();
 }
 
+// Button for starting quiz
+
+startBtn.onclick = quizStart;
+
+
+
 // Loop for Questions
 
 function getQuestions() {
-    var currentQuestion = questions[currentQuestionIndex];
+        var currentQuestion = questions[currentQuestionIndex];
     var promtEl = document.getElementById("question-words");
     promtEl.textContent = currentQuestion.prompt;
-    optionsEl.innerHTML = "";
+    choicesEl.innerHTML = "";
     currentQuestion.options.forEach(function(choice, i){
         var choiceBtn = document.createElement("button");
         choiceBtn.setAttribute("value", choice);
         choiceBtn.textContent = i + 1 + ". " + choice;
         choiceBtn.onclick = questionClick;
-        optionsEl.appendChild(choiceBtn);
+        choicesEl.appendChild(choiceBtn);
     });
 }
+
 
 
 // check for right or wrong questions
@@ -86,7 +95,6 @@ function getQuestions() {
             time = 0;
         }
     timerEl.textContent = time;
-    // feedback?
     feedbackEl.textContent = 'Wrong! The correct answer is: ${questions[currentQuestionIndex].answer}.';
     // Check above if it works
     feedbackEl.syle.color ="red";
@@ -104,6 +112,7 @@ function getQuestions() {
     } else {
         getQuestions();
     }
+
 
 // Quiz End
 
@@ -135,8 +144,8 @@ function saveHighscore() {
     if (name !== "") {
         var highscores = 
         JSON.parse(window.localStorage.getItem("highscores")) || [];
-        var newScore.push(newScore);
-        score: time;
+        var newScore ={
+        score: time,
         name: name
     };
     highscore.push(newScore);
@@ -156,29 +165,5 @@ nameEl.onkeyup = checkForEnter;
 
 submitBtn.onclick = saveHighscore;
 
-// Button for starting quiz
-
-startBtn.onclick = quizStart;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ }
 
