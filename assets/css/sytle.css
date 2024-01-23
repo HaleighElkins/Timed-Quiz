@@ -54,6 +54,14 @@ ol {
     overflow: auto;
 }
 
+li {
+    padding: 10px;
+    list-style: deimal inside none;
+}
+
+li:nth-child(odd){
+    background-color: #98ACA2;
+}
 
 
 
