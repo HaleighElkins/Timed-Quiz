@@ -107,6 +107,8 @@ function getQuestions() {
 
 // Quiz End
 
+// Quiz Ending when user answers all questions
+
 function quizEnd() {
     clearInterval(timerEl);
     var endScreenEl = document.getElementById("quiz-end");
@@ -114,12 +116,17 @@ function quizEnd() {
     var finalScoreEl = document.getElementById("score-final");
     finalScoreEl.textContent = time;
     questionsEl.setAttribute("class", "hide");
-
-
-
 }
 
+// Quiz End when the timer reaches 0
 
+function clockTick() {
+    time --;
+    timerEl.textContent - time;
+    if (time <= 0) {
+        quizEnd();
+    }
+}
 
 
 
