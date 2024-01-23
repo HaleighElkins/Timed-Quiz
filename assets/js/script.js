@@ -141,8 +141,24 @@ function saveHighscore() {
     };
     highscore.push(newScore);
     window.localStorage.setItem("highscores", JSON.stringify(highscores));
+        }
 }
 
+// Saving users score after pressing Enter
+function checkForEnter(event){
+    if (event.key === "Enter"){
+        saveHighscore();
+    }
+}
+nameEl.onkeyup = checkForEnter;
+
+// Button for saving highscores
+
+submitBtn.onclick = saveHighscore;
+
+// Button for starting quiz
+
+startBtn.onclick = quizStart;
 
 
 
@@ -154,9 +170,6 @@ function saveHighscore() {
 
 
 
-
-
- }
 
 
 
