@@ -78,12 +78,6 @@ function getQuestions() {
 }
 
 
-
-
-
-
-
-
 // check for right or wrong questions
  function questionClick() {
     if (this.vaule !== questions[currentQuestionIndex].index){
@@ -101,6 +95,46 @@ function getQuestions() {
         feedbackEl.style.color = "green"
     }
     feedbackEl.setAttribute("class", "feedback");
+    setTimeout(function() {
+        feedbackEl.setAttribute("class", "feedback hide");
+    }, 2000);
+    currentQuestionIndex++;
+    if (currentQuestionIndex === questionClick.length){
+        quizEnd();
+    } else {
+        getQuestions();
+    }
+
+// Quiz End
+
+function quizEnd() {
+    clearInterval(timerEl);
+    var endScreenEl = document.getElementById("quiz-end");
+    endScreenEl.removeAttribute("class");
+    var finalScoreEl = document.getElementById("score-final");
+    finalScoreEl.textContent = time;
+    questionsEl.setAttribute("class", "hide");
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  }
