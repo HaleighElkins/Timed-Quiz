@@ -42,6 +42,7 @@ var nameEl = document.querySelector("#name");
 var startBtn = document.querySelector("#start");
 var submitBtn = document.querySelector("#submit");
 var reStartBtn = document.querySelector("#restart");
+var feedbackEl = document.querySelector("#feedback");
 
 
 // Quiz Start and to hide the front page
@@ -60,8 +61,49 @@ function quizStart() {
     getQuestions();
 }
 
-console.log("quiz start- landing page");
+// Loop for Questions
 
+function getQuestions() {
+    var currentQuestion = questions[currentQuestionIndex];
+    var promtEl = document.getElementById("question-words");
+    promtEl.textContent = currentQuestion.prompt;
+    optionsEl.innerHTML = "";
+    currentQuestion.options.forEach(function(choice, i){
+        var choiceBtn = document.createElement("button");
+        choiceBtn.setAttribute("value", choice);
+        choiceBtn.textContent = i + 1 + ". " + choice;
+        choiceBtn.onclick = questionClick;
+        optionsEl.appendChild(choiceBtn);
+    });
+}
+
+
+
+
+
+
+
+
+// check for right or wrong questions
+ function questionClick() {
+    if (this.vaule !== questions[currentQuestionIndex].index){
+        time -=10;
+        if (time <0){
+            time = 0;
+        }
+    timerEl.textContent = time;
+    // feedback?
+    feedbackEl.textContent = 'Wrong! The correct answer is: ${questions[currentQuestionIndex].answer}.';
+    // Check above if it works
+    feedbackEl.syle.color ="red";
+    } else { 
+        feedbackEl.textContent = "Correct!"
+        feedbackEl.style.color = "green"
+    }
+    feedbackEl.setAttribute("class", "feedback");
+
+
+ }
 
 
 
