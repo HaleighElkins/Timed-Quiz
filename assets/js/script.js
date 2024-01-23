@@ -128,8 +128,20 @@ function clockTick() {
     }
 }
 
+// Saving the Score
 
-
+function saveHighscore() {
+    var name = nameEl.vaule.trim();
+    if (name !== "") {
+        var highscores = 
+        JSON.parse(window.localStorage.getItem("highscores")) || [];
+        var newScore.push(newScore);
+        score: time;
+        name: name
+    };
+    highscore.push(newScore);
+    window.localStorage.setItem("highscores", JSON.stringify(highscores));
+}
 
 
 
