@@ -55,7 +55,7 @@ var finalScoreEl = document.getElementById("score-final");
 var currentQuestionIndex = 0;
 var time = questions.length * 15;
 var timerId;
-
+endScreenEl.style.display = 'none'
 // Timer Countdown
 
 function clockTick() {
