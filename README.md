@@ -29,8 +29,12 @@ THEN I can save my initials and my score
 
 
 ## Credits
-I have had some other look at my code to help with some bugs: 
-My tutor "Enter Name" has helped. 
+I have had some others look at my code to help with some bugs: 
+My tutor "Dru Sanche" has helped me with my clocktick function to work properly.
 
 Fonts that I used are at: https://fonts.google.com/ 
 I found my color palette at: https://www.canva.com/colors/color-palette-generator/
+
+
+## Deployment
+
