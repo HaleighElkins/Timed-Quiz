@@ -37,4 +37,10 @@ I found my color palette at: https://www.canva.com/colors/color-palette-generato
 
 ## Deployment 
 
+Here is the deployed live URL: 
+https://haleighelkins.github.io/Timed-Quiz/
+
+
+Screenshot of the page before you start the quiz:
+
 <img width="960" alt="Screenshot 2024-01-24 175518" src="https://github.com/HaleighElkins/Timed-Quiz/assets/152942336/7aebe59b-6db4-45a6-8bef-35c8165925ad">
