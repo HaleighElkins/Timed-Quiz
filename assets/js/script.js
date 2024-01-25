@@ -92,7 +92,7 @@ function getQuestions() {
     var landingScreenEl = document.getElementById("start-screen").style.display = 'none'
     endScreenEl.style.display = 'none'
     if (currentQuestionIndex > 4) {
-        console.log("Game Ending")
+        // console.log("Game Ending")
         quizEnd()
     } else {
         var currentQuestion = questions[currentQuestionIndex];
