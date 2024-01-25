@@ -34,3 +34,7 @@ My tutor "Dru Sanche" has helped me with my clocktick function to work properly.
 
 Fonts that I used are at: https://fonts.google.com/ 
 I found my color palette at: https://www.canva.com/colors/color-palette-generator/
+
+## Deployment 
+
+<img width="960" alt="Screenshot 2024-01-24 175518" src="https://github.com/HaleighElkins/Timed-Quiz/assets/152942336/7aebe59b-6db4-45a6-8bef-35c8165925ad">
