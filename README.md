@@ -34,3 +34,6 @@ My tutor "Enter Name" has helped.
 
 Fonts that I used are at: https://fonts.google.com/ 
 I found my color palette at: https://www.canva.com/colors/color-palette-generator/
+
+
+<img width="1128" alt="Screenshot" src="https://github.com/HaleighElkins/Timed-Quiz/assets/152942336/48d53dd0-d76e-45fb-844e-6d24e2d48929">
