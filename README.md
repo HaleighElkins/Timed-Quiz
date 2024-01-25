@@ -34,7 +34,3 @@ My tutor "Dru Sanche" has helped me with my clocktick function to work properly.
 
 Fonts that I used are at: https://fonts.google.com/ 
 I found my color palette at: https://www.canva.com/colors/color-palette-generator/
-
-
-## Deployment
-
